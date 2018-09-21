@@ -11,7 +11,9 @@ namespace ConsoleApp0921
     {
         static void Main(string[] args)
         {
-            string[] tomb = new string[10];
+            Console.WriteLine("Adja meg hány darab számot kíván megadni!");
+            int  N = Convert.ToInt32(Console.ReadLine());
+            string[] tomb = new string[N];
 
             for (int i = 0; i < tomb.Length; i++)
             {
@@ -20,7 +22,7 @@ namespace ConsoleApp0921
                 tomb[i] = s;
                 s = "";
             }
-            Console.WriteLine("A 10 számunk: ");
+            Console.WriteLine("A számaink: ");
             foreach (var i in tomb)
             {
                 Console.Write(i+" ");
