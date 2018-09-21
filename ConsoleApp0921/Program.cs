@@ -11,7 +11,7 @@ namespace ConsoleApp0921
         static void Main(string[] args)
         {
             Console.WriteLine("Első github push");
-            Console.WriteLine();
+            
         }
     }
 }
