@@ -13,14 +13,16 @@ namespace ConsoleApp0921
         {
             Console.WriteLine("Adja meg hány darab számot kíván megadni!");
             int  N = Convert.ToInt32(Console.ReadLine());
-            string[] tomb = new string[N];
-
+            int[] tomb = new int[N];
             for (int i = 0; i < tomb.Length; i++)
             {
                 Console.WriteLine("Kérem adjon meg egy számot:");
-                string s = Console.ReadLine();
-                tomb[i] = s;
-                s = "";
+                if (!Int32.TryParse(Console.ReadLine(), out tomb[i]))
+                {
+                    Console.WriteLine("Kérem számot adjon meg!");
+                    i--;
+                }
+
             }
             Console.WriteLine("A számaink: ");
             foreach (var i in tomb)
@@ -42,7 +44,6 @@ namespace ConsoleApp0921
             }
             Console.WriteLine("\nA minimum értékünk: " +min +", a maximum értékünk: " +max);
             Console.ReadKey();
-            
         }
     }
 }
